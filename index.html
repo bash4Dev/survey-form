@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Survey Form</title>
+    <meta name="description" content="A survey form webpage">
+    <meta name="author" content="Bashir">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!--Favicon links-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../survey-form/images/form-icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16 32x32" href="../survey-form/images/form-icon/favicon.ico">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!--Fonts links-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Kaushan+Script&family=Manrope:wght@200..800&family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Kaushan+Script&family=Manrope:wght@200..800&family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 id="title">Bashir's Survey Form</h1>
+        <p class="description">Please fill out this short form – your opinion matters to us!</p>
+    </header>
+    <main>
+        <form action="#" method="post" id="survey-form">
+            <label class="heading">Name</label>
+            <label><input type="text" id="name" placeholder="Enter your name" required></label>
+
+            <label class="heading">Email</label>
+            <label><input type="email" id="email"
+                placeholder="Enter your email" required></label>
+
+            <label class="heading">Phone Number</label>
+            <label><input type="tel" id="number" name="number"
+                placeholder="123-456-7890" required></label>
+
+            <label class="age heading">Age <span>(optional)</span></label>
+            <select id="age" name="age">
+                <option value="">Select an option</option></option>
+                <option value="under_18">Under 18</option>
+                <option value="18_25">18-25</option>
+                <option value="26_35">26-35</option>
+                <option value="36_45">36-45</option>
+                <option value="over_45">Over 45</option>
+            </select>
+
+            <label class="heading">Gender</label>
+            <label class="rad"><input type="radio" name="gender" value="male" required> Male</label>
+            <label class="rad"><input type="radio" name="gender" value="female" required> Female</label>
+            <label class="rad"><input type="radio" name="gender" value="other" required> Other</label>
+
+            <label class="heading">Interests</label>
+            <label class="checkbox"><input type="checkbox" name="interests" value="sports"> Sports</label>
+            <label class="checkbox"><input type="checkbox" name="interests" value="books"> Books</label>
+            <label class="checkbox"><input type="checkbox" name="interests" value="music"> Music</label>
+            <label class="checkbox"><input type="checkbox" name="interests" value="travel"> Travel</label>
+            <label class="checkbox"><input type="checkbox" name="interests" value="tech"> Technology</label>
+
+            <label class="heading">Any comment or suggestion?</label>
+            <textarea name="comments" id="comments" cols="68%" rows="8" placeholder="Please enter your comments..."></textarea>
+
+            <button type="submit" class="submit-btn" onclick="validateAndSubmit()">Submit</button>
+        </form>
+    </main>
+
+
+    <script>
+        function validateAndSubmit() {
+            let form = document.getElementById("survey-form");
+            
+            if (form.checkValidity()) {
+                form.submit();
+            } else {
+                alert("Please fill out the form correctly.");
+            }
+        }
+    </script>
+</body>
+</html>
