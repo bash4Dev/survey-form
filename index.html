@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="styles.css">
 
     <!--Favicon links-->
-    <link rel="apple-touch-icon" sizes="180x180" href="../survey-form/images/form-icon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="16x16 32x32" href="../survey-form/images/form-icon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./survey-form/images/form-icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16 32x32" href="./survey-form/images/form-icon/favicon.ico">
     <link rel="manifest" href="/site.webmanifest">
 
     <!--Fonts links-->
@@ -76,7 +76,7 @@
             let form = document.getElementById("survey-form");
             
             if (form.checkValidity()) {
-                form.submit();
+                alert("Success!")
             } else {
                 alert("Please fill out the form correctly.");
             }
