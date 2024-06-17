@@ -1,33 +1,36 @@
+:root {
+    --white-color: #fff;
+}
+
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    display: block;
-    margin: 0;
-    padding: 0;
     background-image: url(./images/bg-img2.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     font-family: "Ubuntu", sans-serif;
     font-weight: 300;
-    font-style: normal;
 }
 
 h1 {
     text-align: center;
     font-family: "EB Garamond", serif;
-    font-weight: weight;
-    font-style: normal;
-    color: #fff;
+    font-weight: 600;
+    color: var(--white-color);
+    margin: 2rem 0;
 }
 
 .description {
     font-size: large;
     font-weight: 200;
     text-align: center;
-    color: #fff;
+    color: var(--white-color);
+    margin-bottom: 1rem;
 }
 
 main {
@@ -63,17 +66,17 @@ select, #name, #email, #number {
 
 .heading {
     margin: 20px 0 6px 0;
-    color: #fff;
+    color: var(--white-color);
     font-weight: 400;
 }
 span {
     font-weight: 350;
     font-size: small;
-    color: #fff;
+    color: var(--white-color);
 }
 
 label {
-    color: #fff;
+    color: var(--white-color);
 }
 
 textarea#comments {
@@ -88,6 +91,29 @@ button.submit-btn {
     border: none;
     border-radius: 3px;
     padding: 12px;
-    color: #fff;
+    color: var(--white-color);
     font-size: 16px;
+}
+
+@media (max-width: 693px) {
+    main {
+        width: 80%;
+    }
+}
+
+@media (max-width: 405px) {
+    h1 {
+        margin: 1.6rem 0;
+        font-size: 1.6rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+        margin-bottom: 0.8rem;
+    }
+
+    main {
+        width: 90%;
+        padding: 2rem;
+    }
 }
