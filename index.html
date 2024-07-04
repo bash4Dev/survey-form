@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="styles.css">
 
     <!--Favicon links-->
-    <link rel="apple-touch-icon" sizes="180x180" href="../survey-form/images/form-icon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="16x16 32x32" href="../survey-form/images/form-icon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16 32x32" href="./favicon/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 
     <!--Fonts links-->
@@ -62,23 +62,13 @@
             <label class="checkbox"><input type="checkbox" name="interests" value="music"> Music</label>
             <label class="checkbox"><input type="checkbox" name="interests" value="travel"> Travel</label>
             <label class="checkbox"><input type="checkbox" name="interests" value="tech"> Technology</label>
-
+            
             <label class="heading">Any comment or suggestion?</label>
             <textarea name="comments" id="comments" cols="68%" rows="8" placeholder="Please enter your comments..."></textarea>
 
             <button type="submit" class="submit-btn" onclick="validateAndSubmit()">Submit</button>
         </form>
     </main>
-    <!-- <script>
-        function validateAndSubmit() {
-            let form = document.getElementById("survey-form");
-            
-            if (form.checkValidity()) {
-                alert("Success!")
-            } else {
-                alert("Please fill out the form correctly.");
-            }
-        }
-    </script> -->
+    <script src="script.js"></script>
 </body>
 </html>
